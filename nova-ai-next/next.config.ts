@@ -1,8 +1,10 @@
 import type { NextConfig } from "next";
+import path from "path";
 
 const nextConfig: NextConfig = {
-  // Allow importing mp4/png as modules (handled by Next.js asset pipeline)
-  experimental: {},
+  turbopack: {
+    root: path.resolve(__dirname),
+  },
 };
 
 export default nextConfig;
